@@ -1,3 +1,7 @@
+if(process.env.NODE_ENV != "production") {
+  require("dotenv").config();
+}
+
 const express = require("express");
 const app = express();
 const port = 8080;
@@ -20,7 +24,7 @@ const {isLoggedIn} = require("./middleware.js");
 const {saveRedirectUrl} = require("./middleware.js");
 const http = require('http').createServer(app);
 const io = require('socket.io')(http);
-require("dotenv").config();
+
 
 
 
