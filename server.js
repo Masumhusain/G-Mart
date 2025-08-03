@@ -1,7 +1,10 @@
 if(process.env.NODE_ENV != "production") {
   require("dotenv").config();
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1308a15da53e59edab27f1985a8b12f889891762
 const express = require("express");
 const app = express();
 const port = 8080;
