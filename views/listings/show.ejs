@@ -1,0 +1,58 @@
+<% layout("/layouts/boilerplate") %>
+<style>
+  body{
+    background-color: #f2f2f2ac;
+  }
+
+  .buttons {
+    display: flex;
+  }
+  .btnn {
+    width: 100px;
+    margin: 5px;
+    font-size: 1rem;
+  }
+
+  .card {
+    background-color: gray;
+  }
+
+
+
+
+</style>
+
+<body>
+   <div class="card mb-3 m-auto mt-3" style="max-width: 640px;" >
+
+  <div class="row g-0">
+    <p><b>Owner: </b><%=product.owner.username%></p>
+    <div class="col-md-4">
+      <img src="<%=product.image%>" style="height: 400px; width: 100%" class="img-fluid rounded-start" alt="phone image">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%=product.name%></h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p>₹&nbsp;<%=product.price%></p>
+      </div>
+    </div>
+  </div>
+
+  <% if(currUser && currUser._id.equals(product.owner._id)){ %>
+<div class="buttons">
+  <form method="GET" class="edit offset-2" action="/products/<%=product._id%>/edit">
+      <button type="submit" class="btn btn-success btnn">Edit</button>
+   </form>
+
+    <form method="POST" class="del offset-2" action="/products/<%=product._id%>?_method=DELETE">
+      <button type="submit" class="btn btn-dark btnn">Delete</button>
+    </form>
+    </div>
+    </div>
+     <% } %>
+     <form action="/cart/add/<%=product._id%>" method="POST">
+       <button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+     </form>
+   
+</body>

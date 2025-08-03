@@ -1,0 +1,23 @@
+
+<% if(success && success.length) {%>
+    <div class="alert alert-success alert-dismissible errorDiv mt-2" role="alert"> 
+   <%=success%>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div> 
+<%}%>
+
+
+<% if(destroy && destroy.length) {%>
+    <div class="alert alert-danger alert-dismissible errorDiv mt-2" role="alert"> 
+   <%=destroy%>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div> 
+<%}%>
+
+
+<% if(error && error.length) {%>
+    <div class="alert alert-danger alert-dismissible errorDiv mt-2" role="alert"> 
+   <%=error%>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div> 
+<%}%>

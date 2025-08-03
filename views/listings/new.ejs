@@ -1,0 +1,45 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h1>Add New Product</h1>
+    <form action="/products"  class="needs-validation col-6 offset-3"  novalidate method="POST" >
+        <div class="mb-3" >
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="enter product name" required>
+        <div class="valid-feedback">
+      Looks good!
+    </div>
+    <div class="invalid-feedback">
+      please enter  Product!
+    </div>
+        </div>
+        
+        <div class="mb-3">
+        <label for="price" class="form-label" >Price:</label>
+        <input type="number" class="form-control" placeholder="enter price" id="price" name="price" required>
+        <div class="valid-feedback">
+      Looks good!
+    </div>
+    <div class="invalid-feedback">
+      please enter Price!
+    </div>
+        </div>
+        <div class="valid-feedback">please enter produt Price</div>
+        <div class="mb-3">
+        <label for="image"  class="form-label">Image URL:</label>
+        <input type="text" placeholder="enter image url" class="form-control" id="image" name="image" required>
+        <div class="valid-feedback">
+      Looks good!
+    </div>
+    <div class="invalid-feedback">
+      please enter image Url!
+    </div>
+        </div>
+        <button type="submit" class="btn btn-dark">Add Product</button>
+        
+    </form>
+
+
+ 
+  
+    
+</body>
